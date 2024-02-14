@@ -2728,6 +2728,7 @@ a {
 }
 .filter-price__btn {
   border: none;
+  cursor: pointer;
 }
 
 .irs--flat .irs-line {
@@ -2756,8 +2757,7 @@ a {
 }
 
 .irs-from, .irs-to, .irs-single {
-  display: block;
-  top: 50px;
+  display: none;
 }
 
 .irs--flat .irs-min, .irs--flat .irs-max {
