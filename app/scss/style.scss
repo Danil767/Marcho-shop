@@ -926,12 +926,11 @@
     align-items: center;
     padding-top: 30px ;
   }
-  span {
 
-  }
   &__btn {
   @extend %btn;
    border: none;
+    cursor: pointer;
   }
 }
 
@@ -961,8 +960,7 @@
 }
 
 .irs-from, .irs-to, .irs-single {
-  display: block;
-  top: 50px;
+  display: none;
 }
 
 .irs--flat .irs-min, .irs--flat .irs-max {
