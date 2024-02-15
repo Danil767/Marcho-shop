@@ -992,11 +992,7 @@
   }
 
   &__input {
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    position: absolute;
+    @extend %checkbox-hidden;
 
     &:checked + .filter-color__checkbox {
       background-image: url("../images/icons/check-on.svg");
@@ -1039,5 +1035,32 @@
 
 }
 
+.filter-size {
+  &__label {
+    padding-left: 35px;
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+  }
+  &__input {
+    @extend %checkbox-hidden;
+    &:checked + .filter-size__checkbox {
+      background-image: url("../images/icons/checkmark.svg");
+      border: none;
+      & + .filter-size__text {
+        color: $accent;
+      }
+    }
+  }
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid $default;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: -35px;
+    margin-top: 3px;
+  }
+}
 
 @import "media";
