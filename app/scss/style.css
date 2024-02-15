@@ -27,7 +27,7 @@ a, body {
   box-shadow: 0 7px 20px 0 rgba(255, 17, 48, 0.3);
 }
 
-.filter-size__input, .filter-color__input {
+.filter-category__input, .filter-size__input, .filter-color__input {
   width: 1px;
   height: 1px;
   overflow: hidden;
@@ -2842,6 +2842,26 @@ a {
   border-radius: 50%;
   margin-left: -35px;
   margin-top: 3px;
+}
+
+.filter-category__label {
+  margin-bottom: 15px;
+  display: block;
+  cursor: pointer;
+}
+.filter-category__label:last-child {
+  margin-bottom: 0;
+}
+.filter-category__input:checked + .filter-category__checkbox {
+  background-color: #fe3e57;
+  color: #FFFFFF;
+}
+.filter-category__checkbox {
+  background-color: #f6f6f6;
+  color: #29282d;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
