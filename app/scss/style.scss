@@ -1790,43 +1790,49 @@
 .blog-page {
   padding: 120px 0 60px;
 
-&__slider {
-  position: relative;
-  .slick-next,
-  .slick-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 5;
-    width: 40px;
-    height: 40px;
-    background-color: $accent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    outline: none;
-    path {
-      fill: #fff;
-    }
-  }
-  .slick-disabled {
-    background-color:#FFFFFF;
-    box-shadow: 0 7px 20px 0 rgba(168, 168, 168, 0.3);
-    path {
-      fill: $accent;
-    }
-  }
-  .slick-next {
-  right: 40px;
+  &__slider {
+    position: relative;
 
+    .slick-next,
+    .slick-prev {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      width: 40px;
+      height: 40px;
+      background-color: $accent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      border-radius: 50%;
+      outline: none;
+
+      path {
+        fill: #fff;
+      }
+    }
+
+    .slick-disabled {
+      background-color: #FFFFFF;
+      box-shadow: 0 7px 20px 0 rgba(168, 168, 168, 0.3);
+
+      path {
+        fill: $accent;
+      }
+    }
+
+    .slick-next {
+      right: 40px;
+
+    }
+
+    .slick-prev {
+      left: 40px;
+    }
   }
-  .slick-prev {
-  left: 40px;
-  }
-}
 
   &__inner {
     display: flex;
@@ -1840,6 +1846,7 @@
 
   &__item {
     margin-bottom: 60px;
+
     &.blog-page__item--no-image {
       border-top: 1px solid #ececec;
       box-shadow: 0 20px 60px 0 rgba(202, 202, 202, 0.35);
@@ -1873,6 +1880,7 @@
     @extend %roboto-700;
     margin-bottom: 20px;
     transition: all .3s;
+
     &:hover {
       color: $accent;
     }
@@ -1884,6 +1892,7 @@
 
   .blog-box {
     justify-content: start;
+
     &__author {
       margin-right: 30px;
     }
@@ -1895,6 +1904,7 @@
   margin-bottom: 40px;
   text-align: center;
   padding: 40px 25px;
+
   &__img {
     display: inline-block;
     width: 160px;
@@ -1902,24 +1912,30 @@
     object-fit: cover;
     margin: 0 auto 35px;
   }
+
   &__name {
-  color: $title;
+    color: $title;
     font-size: 18px;
     @extend %roboto-700;
   }
+
   &__position {
-  color: $accent;
+    color: $accent;
     margin-bottom: 25px;
   }
+
   &__text {
     margin-bottom: 25px;
   }
+
   &__social-link {
     margin: 0 8px;
+
     path {
       fill: $default;
       transition: all .3s;
     }
+
     &:hover {
       path {
         fill: $accent;
@@ -1932,6 +1948,7 @@
   padding: 35px 30px 40px;
   border: 1px solid #ececec;
   margin-bottom: 40px;
+
   &__big-title {
     color: $title;
     text-transform: uppercase;
@@ -1939,33 +1956,40 @@
     font-size: 22px;
     margin-bottom: 35px;
   }
+
   &__item {
     margin-bottom: 20px;
     display: flex;
+
     & + .latest-post__item {
       border-top: 1px solid #ececec;
       padding-top: 20px;
     }
   }
+
   &__img-link {
     display: block;
     margin-right: 20px;
     min-width: 80px;
   }
+
   &__img {
     width: 80px;
     height: 80px;
     object-fit: cover;
   }
+
   &__title-link {
     @extend %roboto-400;
     font-size: 18px;
     line-height: 28px;
     color: $title;
   }
+
   &__date {
     padding-left: 26px;
     position: relative;
+
     &::before {
       content: '';
       position: absolute;
@@ -1975,9 +1999,130 @@
       width: 16px;
       height: 16px;
     }
-
   }
 }
+
+.blog-one {
+
+  &__left-img {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  &__text{
+    border: 1px solid #ececec;
+    border-top: none;
+    padding: 30px;
+    margin-top: -1px;
+
+    h4 {
+      @extend %roboto-700;
+      font-size: 22px;
+      color: $title;
+      margin: 25px 0;
+    }
+    p {
+      margin: 25px 0;
+    }
+    blockquote {
+      background-color: $bg;
+      border-left: 3px solid $accent;
+      color: $title;
+      @extend %roboto-400;
+      font-size: 22px;
+      margin: 25px 0;
+      padding: 35px;
+    }
+  }
+  &__info {
+    display: flex;
+    margin-bottom: 25px;
+  }
+  &__info-link {
+    margin-right: 30px;
+    padding-left: 28px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-image: url('../images/icons/calender.svg');
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__info-link--comment::before {
+    background-image: url('../images/icons/comment.svg');
+    top: 3px;
+  }
+  &__info-link--author::before {
+    background-image: url('../images/icons/user-min.svg');
+  }
+  &__form-title {
+    text-transform: uppercase;
+    margin: 35px 0 25px;
+    color: $title;
+    font-size: 24px;
+    @extend %roboto-700;
+  }
+  .comments-form {
+      border-bottom: none;
+  }
+  &__box {
+    margin: 25px 0 35px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__tags {
+    span {
+      text-transform: uppercase;
+      color: $title;
+      @extend %roboto-700;
+    }
+  }
+  &__share {
+    span {
+      text-transform: uppercase;
+      color: $title;
+      @extend %roboto-700;
+    }
+    a{
+      margin-right: 12px;
+      vertical-align: middle;
+      &:hover {
+        path {
+          fill: $accent;
+        }
+      }
+      path {
+        fill: #727272;
+      }
+    }
+  }
+  &__author {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    display: flex;
+  }
+  &__author-img {
+    width: 140px;
+    height: 140px;
+    margin-right: 30px;
+    object-fit: cover;
+  }
+  &__author-name {
+    @extend %roboto-700;
+    margin-bottom: 24px;
+    font-size: 22px;
+    color: $title;
+  }
+}
+
+
+
+
 
 
 
