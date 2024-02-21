@@ -145,12 +145,13 @@
   &__text {
     margin-bottom: 25px;
   }
-
+  
   &__form-input {
     background-color: #FFFFFF;
     max-width: 320px;
     width: 100%;
     border: none;
+    margin-right: 3px;
     padding: 12px 10px 12px 15px;
 
     &::placeholder {
@@ -2009,7 +2010,8 @@
     margin-right: 30px;
     margin-bottom: 10px;
   }
-  &__text{
+
+  &__text {
     border: 1px solid #ececec;
     border-top: none;
     padding: 30px;
@@ -2021,9 +2023,11 @@
       color: $title;
       margin: 25px 0;
     }
+
     p {
       margin: 25px 0;
     }
+
     blockquote {
       background-color: $bg;
       border-left: 3px solid $accent;
@@ -2034,14 +2038,17 @@
       padding: 35px;
     }
   }
+
   &__info {
     display: flex;
     margin-bottom: 25px;
   }
+
   &__info-link {
     margin-right: 30px;
     padding-left: 28px;
     position: relative;
+
     &::before {
       content: '';
       position: absolute;
@@ -2052,13 +2059,16 @@
       height: 16px;
     }
   }
+
   &__info-link--comment::before {
     background-image: url('../images/icons/comment.svg');
     top: 3px;
   }
+
   &__info-link--author::before {
     background-image: url('../images/icons/user-min.svg');
   }
+
   &__form-title {
     text-transform: uppercase;
     margin: 35px 0 25px;
@@ -2066,14 +2076,17 @@
     font-size: 24px;
     @extend %roboto-700;
   }
+
   .comments-form {
-      border-bottom: none;
+    border-bottom: none;
   }
+
   &__box {
     margin: 25px 0 35px;
     display: flex;
     justify-content: space-between;
   }
+
   &__tags {
     span {
       text-transform: uppercase;
@@ -2081,37 +2094,44 @@
       @extend %roboto-700;
     }
   }
+
   &__share {
     span {
       text-transform: uppercase;
       color: $title;
       @extend %roboto-700;
     }
-    a{
+
+    a {
       margin-right: 12px;
       vertical-align: middle;
+
       &:hover {
         path {
           fill: $accent;
         }
       }
+
       path {
         fill: #727272;
       }
     }
   }
+
   &__author {
     border-bottom: 1px solid #ececec;
     padding-bottom: 40px;
     margin-bottom: 40px;
     display: flex;
   }
+
   &__author-img {
     width: 140px;
     height: 140px;
     margin-right: 30px;
     object-fit: cover;
   }
+
   &__author-name {
     @extend %roboto-700;
     margin-bottom: 24px;
@@ -2129,9 +2149,115 @@
   height: 450px;
 }
 
+.contact {
+  padding-bottom: 120px;
 
+  &__inner {
+    display: flex;
+  }
 
+  &__info {
+    max-width: 370px;
+    margin-right: 30px;
+  }
 
+  &__info-title {
+    font-size: 48px;
+    line-height: 58px;
+    @extend %roboto-700;
+    color: $title;
+    margin-bottom: 20px;
+  }
+
+  &__info-text {
+    margin-bottom: 60px;
+  }
+
+  &__info-item {
+    margin-top: 55px;
+    color: $title;
+    padding-left: 80px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -5px;
+      width: 60px;
+      height: 60px;
+      box-shadow: 0 5px 20px 0 rgba(146, 146, 146, 0.3);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/icons/phone-w-r.svg");
+      left: 20px;
+      top: 15px;
+    }
+  }
+
+  &__info-item--location::after {
+    background-image: url("../images/icons/geo-w-r.svg");
+    width: 14px;
+    left: 23px;
+  }
+
+  &__info-item--email::after {
+    background-image: url("../images/icons/mail-w-r.svg");
+  }
+
+  &__info-phone {
+    display: block;
+    color: $title;
+  }
+
+  &__form {
+    width: 100%;
+    padding: 60px 40px;
+    box-shadow: 0 10px 40px 0 rgba(172, 172, 172, 0.3);
+  }
+  &__form-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: $title;
+    @extend %roboto-700;
+  }
+  &__form-box {
+    display: flex;
+    justify-content: space-between;
+    input {
+      width: 330px;
+    }
+  }
+  &__form-input {
+    width: 100%;
+    display: block;
+    height: 60px;
+    background-color: $bg;
+    border: none;
+    padding: 0 24px;
+    margin-bottom: 30px;
+  }
+  &__form-textarea {
+    width: 100%;
+    display: block;
+    resize: none;
+    height: 200px;
+    background-color: $bg;
+    border: none;
+    padding: 24px;
+    margin-bottom: 30px;
+  }
+  &__form-btn {
+    @extend %btn;
+    border: none;
+    cursor: pointer;
+  }
+}
 
 
 @import "media";
