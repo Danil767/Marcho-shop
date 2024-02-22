@@ -27,6 +27,7 @@
     "slick-carousel": "^1.8.1"
   },
   "dependencies": {
+    "gulp-rename": "^2.0.0",
     "rateyo": "^2.3.2"
   }
 }

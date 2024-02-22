@@ -8,7 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const nunjucksRender = require('gulp-nunjucks-render');
-
+const rename = require('gulp-rename')
 
 function browsersync() {
     browserSync.init({
@@ -62,9 +62,12 @@ function scripts() {
 }
 
 function styles() {
-    return src('app/scss/style.scss')
+    return src('app/scss/*.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-        .pipe(concat('style.min.css'))
+        // .pipe(concat())
+        .pipe(rename({
+            suffix: '.min'
+        }))
         .pipe(autoprefixer({
             overrideBrowserslist: ['last 10 version'],
             grid: true
